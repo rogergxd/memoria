@@ -92,22 +92,26 @@ function comparar() {
     const opcionUnoId = cartaSeleccionadaId[0];
     const opcionDosId = cartaSeleccionadaId[1];
     if (cartaSeleccionada[0] == cartaSeleccionada[1] && cartaSeleccionadaId[0] != cartaSeleccionadaId[1]) {
-        alert('Perfecto');
+        jugar.innerHTML = 'Perfecto';
+        jugar.style.color = 'green';
         imagenes[opcionUnoId].style.visibility = 'hidden';
         imagenes[opcionDosId].style.visibility = 'hidden';
         completadas.push(cartaSeleccionada);
-        console.log(completadas);
-    }else {
-        alert('Nein');
+        }else {
+        jugar.innerHTML = 'Nein';
+        jugar.style.color = 'red';
         imagenes[opcionUnoId].setAttribute('src', 'images/blank.png');
         imagenes[opcionDosId].setAttribute('src', 'images/blank.png');
     }
     cartaSeleccionada = [];
     cartaSeleccionadaId = [];
+    
 
     if (completadas.length === cartas.length/2) {
         alert('Felicidades, ganaste el juego. Click to play si quieres volver a jugar')
         setTimeout(window.location.reload(), 500);
+        jugar.innerHTML = 'Click to play';
+        jugar.style.color = 'black';
 
     }
    
