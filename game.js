@@ -110,9 +110,6 @@ function comparar() {
     if (completadas.length === cartas.length/2) {
         alert('Felicidades, ganaste el juego. Click to play si quieres volver a jugar')
         setTimeout(window.location.reload(), 500);
-        jugar.innerHTML = 'Click to play';
-        jugar.style.color = 'black';
-
     }
    
 
