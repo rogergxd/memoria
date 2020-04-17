@@ -91,7 +91,7 @@ function comparar() {
     let imagenes = document.querySelectorAll('.cards');
     const opcionUnoId = cartaSeleccionadaId[0];
     const opcionDosId = cartaSeleccionadaId[1];
-    if (cartaSeleccionada[0] == cartaSeleccionada[1]) {
+    if (cartaSeleccionada[0] == cartaSeleccionada[1] && cartaSeleccionadaId[0] != cartaSeleccionadaId[1]) {
         alert('Perfecto');
         imagenes[opcionUnoId].style.visibility = 'hidden';
         imagenes[opcionDosId].style.visibility = 'hidden';
